@@ -1,0 +1,106 @@
+﻿@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  color-scheme: light;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --radius: 0.625rem;
+
+  /* Single source of truth for brand colors. UK Blue = PMS 286 (brand.uky.edu). */
+  --uk-blue: #0033a0;
+  --uk-blue-dark: #00277a;
+  --uk-blue-tint: #e8eefb;
+  --uk-neutral-900: #1f2937;
+  --uk-neutral-600: #4b5563;
+  --uk-neutral-200: #d1d5db;
+  --uk-neutral-50: #f5f6f8;
+  --uk-success: #1b6e3a;
+  --uk-warning: #8a4b00;
+
+  --background: #ffffff;
+  --foreground: var(--uk-neutral-900);
+  --card: #ffffff;
+  --card-foreground: var(--uk-neutral-900);
+  --popover: #ffffff;
+  --popover-foreground: var(--uk-neutral-900);
+  --primary: var(--uk-blue);
+  --primary-foreground: #ffffff;
+  --secondary: var(--uk-blue-tint);
+  --secondary-foreground: var(--uk-blue-dark);
+  --muted: var(--uk-neutral-50);
+  --muted-foreground: var(--uk-neutral-600);
+  --accent: var(--uk-blue-tint);
+  --accent-foreground: var(--uk-blue-dark);
+  --destructive: #b42318;
+  --border: var(--uk-neutral-200);
+  --input: var(--uk-neutral-200);
+  --ring: var(--uk-blue);
+  --chart-1: var(--uk-blue);
+  --chart-2: var(--uk-neutral-600);
+  --chart-3: var(--uk-success);
+  --chart-4: var(--uk-warning);
+  --chart-5: var(--destructive);
+  --sidebar: var(--uk-neutral-50);
+  --sidebar-foreground: var(--uk-neutral-900);
+  --sidebar-primary: var(--uk-blue);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--uk-blue-tint);
+  --sidebar-accent-foreground: var(--uk-blue-dark);
+  --sidebar-border: var(--uk-neutral-200);
+  --sidebar-ring: var(--uk-blue);
+}
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  html, body, #root { 
+    height: 100%; 
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
